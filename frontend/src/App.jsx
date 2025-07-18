@@ -1,4 +1,4 @@
-import './App.css'
+import React from 'react'
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
 import Toaster from 'react-hot-toast'
 
@@ -11,7 +11,7 @@ import Interview from "./pages/interview/interview"
 function App() {
   return (
     <div>
-      <Router>
+    <Router>
       <Routes>
         <Route path='/' element = {<Landing />}></Route>
         <Route path='/login' element = {<Login />}></Route>
@@ -20,6 +20,15 @@ function App() {
         <Route path='/interview/:sessionId' element = {<Interview />}></Route>
       </Routes>
     </Router>
+    
+    {/* <Toaster
+      toastOptions = {{
+        className: "",
+        style: {
+          fontSize:"13px",
+        },
+      }}
+    /> */}
     </div>
   )
 }
